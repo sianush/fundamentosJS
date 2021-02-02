@@ -1,0 +1,5 @@
+ASINCRONISMO: 
+
+CLASE1
+    Para invocar una función se pone entre parentesis ejemplo:
+        console.log(funcion)
