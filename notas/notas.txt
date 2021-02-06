@@ -1,5 +1,125 @@
 ASINCRONISMO: 
 
-CLASE1
-    Para invocar una función se pone entre parentesis ejemplo:
-        console.log(funcion)
+CLASE3
+            Para invocar una función se pone entre parentesis ejemplo:
+            console.log(funcion)
+
+                ++declarar una variable:
+                    var nombre
+
+            -JS lenguaje debilmente tipado (no hay nada que diga qu ela variable es string (texto) no se cooce el tipo especifico de las variables)
+            
+            
+    // var nombre
+
+    // nombre = 'Anais'
+    // console.log('Hola ' + nombre)
+
+    // var nombre = 'Anais'
+    // var apellido = 'Mercado'
+    // console.log('Hola '+ nombre+ ' ' +apellido)
+
+    var nombre = 'Anais',  apellido = 'Mercado'
+    console.log('Hola '+ nombre+ ' ' +apellido)
+
+
+CLASE 4 
+
+    var nombre = 'Anais',  apellido = 'Mercado'
+
+    var nombreMayusculas = nombre.toUpperCase()
+    var apellidoMinusculas = apellido.toLowerCase()
+
+
+    //primer caracter de un string
+    var primeraLetraDelNombre = nombre.charAt(0)
+
+    // preguntar cuantos caracteres tiene el string (length e sun atributo)
+    var cantidadDeLetrasDelNombre = nombre.length
+
+    //Como concatenar 2 strings
+    // var nombreCompleto = nombre + ' ' +apellido
+
+
+    //interpolación de texto comilla invertida
+    var nombreCompleto = `${nombre} ${apellido.toUpperCase}`
+
+    //Acceder a un substring
+    var str =
+    console.log('feaaaaaa')
+
+5-VARIABLES-NUMEROS
+        var edad = 27
+        // edad = edad +1
+        edad += 1 
+        var peso = 75
+        // peso = peso -2
+        peso -= 2
+        // con el -= se resta el numero que aparece a lado del igual
+        var sandwich = 1
+        //  peso = peso + sandwich
+
+        peso += sandwich
+        var futbol = 3
+        peso -= futbol
+
+        var precioDeVino = 200.3
+        // var total = precioDeVino * 3
+        //total  -- 600.9000000000001
+        //la manera de describir decimales no es tan precisa, para lograr arreglar este problema
+        // para poder solucionarlo hay que eliminar los decimales como en el ejemplo de abajo
+        // var total = precioDeVino *100 *3 /100
+        // con la opción de abjo se vuelve preciso el calculo sin importar cuantas deciamles tenga
+        var total = Math.round(precioDeVino *100 *3) /100
+        //math es el mdulo de matemáticas math.round es redondeo
+        var totalStr = total.toFixed(2)
+        // toFixes son las decimales que se toman en cuenta después de lA COMA 
+        var total2 = parseFloat(totalStr)
+        // parseFloat : float es el punto flotanto o puntos decimales y parse : tranformar o leer de un string a un decimal en est ecaso
+
+        var pizza = 8
+        var persona = 2
+        // hacemos la cuneta para ver cuantas le tocan a cada persona 
+        var cantidadPorcionesPersona = pizza / persona
+
+6 FUNCIONES : 
+    son pedazos de código reutilizables
+    -- funcition (palabra reservadad, no podemos tener variables que se llamne function)
+    function +nombre de la función + (parametro){delimitar el cuerpo de la función}
+    function imprimirEdad(){
+        console-log(`${nombre} tiene ${edad} años`)
+    }
+    imprimirEdad()
+    para llamar la función
+
+    var nombre = 'Ànais', edad = 34
+    // function imprimirEdad(){
+    //     console.log(`${nombre} tiene ${edad} años`)
+    // }
+    // imprimirEdad()
+
+    function imprimirEdad(n, e){
+        console.log(`${n} tiene ${e} años`)
+    }
+    imprimirEdad(nombre, edad)
+    imprimirEdad('vicky', 28)
+    imprimirEdad ('erick', 18)
+    imprimirEdad ('Losi', 38)
+
+
+7 ALCANCE DE LAS FUNCIONES
+    Variable global: cuando una variable no esta definida dentro del cuero de una función, se puede acceder desde cualquier funcion
+        el objeto global depende desde donde estemos ejecutando js (servidor o browser)
+        
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
