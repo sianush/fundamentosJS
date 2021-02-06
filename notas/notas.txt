@@ -110,15 +110,167 @@ CLASE 4
 7 ALCANCE DE LAS FUNCIONES
     Variable global: cuando una variable no esta definida dentro del cuero de una función, se puede acceder desde cualquier funcion
         el objeto global depende desde donde estemos ejecutando js (servidor o browser)
+    var nombre = 'Siana'
+
+    function imprimirNombreEnMayusculas(nombre){
         
+        nombre = nombre.toUpperCase()
+        console.log(nombre)
+    }
+    imprimirNombreEnMayusculas(nombre)
+    //nombr en mayusculas con un avariable global    
 
-8
+8 OBJETOS
+    // var nombreSiana = 'Siana'
+    // var nombreAnais= 'Anais'
 
-9
+    // function imprimirNombreEnMayusculas(nombre){
+        
+    //     nombre = nombre.toUpperCase()
+    //     console.log(nombre)
+    // }
+    // imprimirNombreEnMayusculas(nombreSiana)
+    // imprimirNombreEnMayusculas(nombreAnais)
+    // funciona pero no es adecuado
 
-10
 
-11
+
+
+    var Siana = {
+        nombre: 'Siana',
+        apellido: 'Mercado',
+        edad: 34
+    }
+    var Dario = {
+        nombre: 'Dario',
+        apellido: 'Siana',
+        edad: 24
+    }
+    //las llaves delimitan un objeto {}
+    //objeto es clave y valor (izquierda clave)(derecha valor)
+    function imprimirNombreEnMayusculas(nombre){
+        
+    var nombre = persona.nombre.toUpperCase()
+        console.log(nombre)
+    }
+    imprimirNombreEnMayusculas(siana)
+    imprimirNombreEnMayusculas(dario)
+    // funciona pero no es adecuado
+
+9 DESESTRUCTURAR OBJETOS
+                    // var nombreSiana = 'Siana'
+                    // var nombreAnais= 'Anais'
+
+                    // function imprimirNombreEnMayusculas(nombre){
+                        
+                    //     nombre = nombre.toUpperCase()
+                    //     console.log(nombre)
+                    // }
+                    // imprimirNombreEnMayusculas(nombreSiana)
+                    // imprimirNombreEnMayusculas(nombreAnais)
+                    // funciona pero no es adecuado
+
+
+
+
+                    var Siana = {
+                        nombre: 'Siana',
+                        apellido: 'Mercado',
+                        edad: 34
+                    }
+                    var Dario = {
+                        nombre: 'Dario',
+                        apellido: 'Siana',
+                        edad: 24
+                    }
+                    //las llaves delimitan un objeto {}
+                    //objeto es clave y valor (izquierda clave)(derecha valor)
+                    function imprimirNombreEnMayusculas(nombre){
+                        
+                    var nombre = persona.nombre.toUpperCase()
+                        console.log(nombre)
+                    }
+                    imprimirNombreEnMayusculas(siana)
+                    imprimirNombreEnMayusculas(dario)
+                    // funciona pero no es adecuado
+
+
+
+    var siana = {
+        nombre: 'Siana',
+        apellido: 'Mercado',
+        edad: 34
+    }
+    var dario = {
+        nombre: 'Dario',
+        apellido: 'Siana',
+        edad: 24
+    }
+    function imprimirEdadNombre (persona){
+        var {nombre,edad}= persona
+        console.log(`Hola, me llamo ${nombre} y tengo ${edad} años`)
+    }
+    imprimirEdadNombre(siana)
+    imprimirEdadNombre(dario)
+
+10 PARAMETROS REFERENCIA O VALOR:
+    Si pasamos un valor a traves de un paraametro hacia una función cuando la invocamamos
+    y ese valor se veía modificado sólo permanece modificado si se accede desde una variable global
+     // objetos pasados por parametros
+            var siana = {
+                nombre: 'Siana',
+                apellido: 'Mercado',
+                edad: 34
+            }
+            var dario = {
+                nombre: 'Dario',
+                apellido: 'Siana',
+                edad: 24
+            }
+
+            // function cumpleaños(persona){
+            //     persona.edad += 1
+            // }
+
+            //los objetos que  pasamos por parametros se pasan por referencia, eso quiere decir que si los modificamos dentro del cuerpo d euna función su valor se vera modificado fuera de esa función
+
+            function cumpleaños(persona){
+                return {
+                    ...persona,
+                    edad: persona.edad + 1
+                }
+            }
+            // var sianaMasViejo = cumpleaños(siana)
+            // undefined
+            // sianaMasViejo
+            // {nombre: "Siana", apellido: "Mercado", edad: 35}
+            // siana
+            // {nombre: "Siana", apellido: "Mercado", edad: 34}
+
+11 COMPARACIONES EN JS
+            var x = 4, y = '4'
+                        // el = asigna un valor  auna variable, si queremos asignar 2 variables colocamos ==
+                        // x == y
+                        // true
+                        // con el == lleva los dos valores  aun mismo tipo de dato
+                        // si queremos preguntar si x o y son iguales y tienen el mismo tipo y valor se usa ===
+                        // x === y
+                        // false porqu euno es un string y el otro un número
+                        // siempre qu epodamos ocupemos el triple ===
+
+            var  siana = {
+                nombre: 'Siana'
+            }
+                    // var anais = {
+                    //     nombre: 'Siana'
+                    // }
+                    // para comparaR OBJETOS
+                    // var siana = anais se vuelve el mismo objeto se dirigen al mismo sitio en js
+
+            var anais = {
+                ...siana
+            }
+                    // dos posiciones distintas y dos objetos distintio   
 
 12
 
